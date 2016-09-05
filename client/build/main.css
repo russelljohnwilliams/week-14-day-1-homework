@@ -1,0 +1,28 @@
+body{
+  font-family: Verdana;
+}
+
+.movie-box{
+  border: 2px solid black;
+  border-radius: 2px;
+  padding: 40px 10px;
+  margin: 50px auto;
+  width: 40vw;
+  font-size: 1.2vw;
+  text-align: center;
+}
+
+button{
+  background-color: grey;
+  padding: 10px;
+  width: 150px;
+  border: 2px solid black;
+  border-radius: 2px;
+  font-size: 20px;
+}
+
+button:hover{
+  background-color: lightblue;
+}
+
+
