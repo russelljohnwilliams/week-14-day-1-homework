@@ -19774,9 +19774,14 @@
 	      React.createElement(
 	        'h1',
 	        null,
-	        'ded gud filims owt now'
+	        'Films out at the cinema this week'
 	      ),
-	      React.createElement(MovieList, { data: this.state.data })
+	      React.createElement(MovieList, { data: this.state.data }),
+	      React.createElement(
+	        'form',
+	        { action: 'http://www.imdb.com/showtimes/' },
+	        React.createElement('input', { type: 'submit', value: 'Get Showtimes' })
+	      )
 	    );
 	  }
 	
@@ -19835,9 +19840,9 @@
 	  displayName: 'Movie',
 	
 	
-	  handleDelete: function handleDelete() {
-	    this.props.handleCommentDelete(this.props.id);
-	  },
+	  // propTypes:{
+	  //   title: React.PropTypes.String.isRequired
+	  // },
 	
 	  render: function render() {
 	    return React.createElement(
@@ -19847,8 +19852,7 @@
 	        'a',
 	        { href: 'http://www.imdb.com/title/' + this.props.id, target: '_blank', className: 'movie-title' },
 	        this.props.title
-	      ),
-	      this.props.children
+	      )
 	    );
 	  }
 	

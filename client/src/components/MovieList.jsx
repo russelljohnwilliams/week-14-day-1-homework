@@ -13,7 +13,6 @@ var MovieList = React.createClass({
       
       return(
          <Movie title={movie.title} id={movie.id} key={movie.id}>
-         
          </Movie>
         )
     }.bind(this))

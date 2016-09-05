@@ -19,11 +19,14 @@ var MovieBox = React.createClass({
 
   render: function(){
     return(
-      <div className="movie-box"><h1>ded gud filims owt now</h1>
-        <MovieList data={this.state.data}/>
-        
+      <div className="movie-box">
+      <h1>Films out at the cinema this week</h1>
+      <MovieList data={this.state.data}/>
+     <form action="http://www.imdb.com/showtimes/">
+         <input type="submit" value="Get Showtimes" />
+     </form>
       </div>
-    )
+      )
   }
 
 })
