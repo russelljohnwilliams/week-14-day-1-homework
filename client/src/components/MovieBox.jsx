@@ -19,7 +19,7 @@ var MovieBox = React.createClass({
 
   render: function(){
     return(
-      <div className="movie-box">
+      <div className="movie-box"><h1>ded gud filims owt now</h1>
         <MovieList data={this.state.data}/>
         
       </div>

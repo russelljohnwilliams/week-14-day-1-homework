@@ -12,7 +12,8 @@ var MovieList = React.createClass({
     var movieNodes = this.props.data.map(function(movie){
       
       return(
-         <h1>help</h1>
+         <Movie title={movie.title} id={movie.id} key={movie.id}> 
+         </Movie>
         )
     }.bind(this))
 

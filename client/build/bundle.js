@@ -19771,6 +19771,11 @@
 	    return React.createElement(
 	      'div',
 	      { className: 'movie-box' },
+	      React.createElement(
+	        'h1',
+	        null,
+	        'ded gud filims owt now'
+	      ),
 	      React.createElement(MovieList, { data: this.state.data })
 	    );
 	  }
@@ -19800,11 +19805,7 @@
 	
 	    var movieNodes = this.props.data.map(function (movie) {
 	
-	      return React.createElement(
-	        'h1',
-	        null,
-	        'help'
-	      );
+	      return React.createElement(Movie, { title: movie.title, id: movie.id, key: movie.id });
 	    }.bind(this));
 	
 	    return React.createElement(
