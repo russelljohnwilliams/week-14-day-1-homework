@@ -12,7 +12,8 @@ var MovieList = React.createClass({
     var movieNodes = this.props.data.map(function(movie){
       
       return(
-         <Movie title={movie.title} id={movie.id} key={movie.id}> 
+         <Movie id={movie.id} key={movie.id}>
+         <a href={'http://www.imdb.com/title/' + movie.id } target="_blank">{movie.title}</a>
          </Movie>
         )
     }.bind(this))

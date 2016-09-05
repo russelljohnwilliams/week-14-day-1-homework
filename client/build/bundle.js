@@ -19757,7 +19757,7 @@
 	var React = __webpack_require__(1);
 	var MovieList = __webpack_require__(160);
 	
-	var sampleData = [{ title: "Kubo and the Two Strings", id: "tt4302938", link: "http://www.imdb.com/title/tt4302938/" }, { title: "Captain Fantastic", id: "tt3553976", link: "http://www.imdb.com/title/tt3553976/" }, { title: "Don't Breathe", id: "tt4160708", link: "http://www.imdb.com/title/tt4160708/" }, { title: "Hell or High Water", id: "tt2582782", link: "http://www.imdb.com/title/tt2582782/" }, { title: "The Blue Room", id: "tt3230082", link: "http://www.imdb.com/title/tt3230082/" }, { title: "The Final Reel", id: "tt4576384", link: "http://www.imdb.com/title/tt4576384/" }];
+	var sampleData = [{ title: "Kubo and the Two Strings", id: "tt4302938" }, { title: "Captain Fantastic", id: "tt3553976" }, { title: "Don't Breathe", id: "tt4160708" }, { title: "Hell or High Water", id: "tt2582782" }, { title: "The Blue Room", id: "tt3230082" }, { title: "The Final Reel", id: "tt4576384" }];
 	
 	var MovieBox = React.createClass({
 	  displayName: 'MovieBox',
@@ -19805,7 +19805,15 @@
 	
 	    var movieNodes = this.props.data.map(function (movie) {
 	
-	      return React.createElement(Movie, { title: movie.title, id: movie.id, key: movie.id });
+	      return React.createElement(
+	        Movie,
+	        { id: movie.id, key: movie.id },
+	        React.createElement(
+	          'a',
+	          { href: 'http://www.imdb.com/title/' + movie.id, target: '_blank' },
+	          movie.title
+	        )
+	      );
 	    }.bind(this));
 	
 	    return React.createElement(
