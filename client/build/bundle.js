@@ -19805,15 +19805,7 @@
 	
 	    var movieNodes = this.props.data.map(function (movie) {
 	
-	      return React.createElement(
-	        Movie,
-	        { id: movie.id, key: movie.id },
-	        React.createElement(
-	          'a',
-	          { href: 'http://www.imdb.com/title/' + movie.id, target: '_blank' },
-	          movie.title
-	        )
-	      );
+	      return React.createElement(Movie, { title: movie.title, id: movie.id, key: movie.id });
 	    }.bind(this));
 	
 	    return React.createElement(
@@ -19843,10 +19835,6 @@
 	  displayName: 'Movie',
 	
 	
-	  propTypes: {
-	    author: React.PropTypes.string.isRequired
-	  },
-	
 	  handleDelete: function handleDelete() {
 	    this.props.handleCommentDelete(this.props.id);
 	  },
@@ -19856,8 +19844,8 @@
 	      'div',
 	      { className: 'movie' },
 	      React.createElement(
-	        'h2',
-	        { className: 'comment-title' },
+	        'a',
+	        { href: 'http://www.imdb.com/title/' + this.props.id, target: '_blank', className: 'movie-title' },
 	        this.props.title
 	      ),
 	      this.props.children

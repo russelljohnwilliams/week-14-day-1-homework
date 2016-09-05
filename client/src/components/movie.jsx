@@ -2,9 +2,6 @@ var React = require('react')
 
 var Movie = React.createClass({
 
-  propTypes:{
-    author: React.PropTypes.string.isRequired
-  },
 
   handleDelete: function(){
     this.props.handleCommentDelete(this.props.id)
@@ -13,9 +10,9 @@ var Movie = React.createClass({
   render: function(){
     return(
       <div className="movie">
-        <h2 className='comment-title'>
+        <a href={'http://www.imdb.com/title/' + this.props.id } target="_blank" className='movie-title'>
           {this.props.title}
-        </h2>
+        </a>
         {this.props.children} 
       </div>
       )
