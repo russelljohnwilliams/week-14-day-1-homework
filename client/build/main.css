@@ -1,28 +1,63 @@
 body{
   font-family: Verdana;
+  background-color: lightgrey;
+  color: #3E4348;
 }
 
 .movie-box{
-  border: 2px solid black;
-  border-radius: 2px;
+  border: 0;
+  border-radius: 50px;
   padding: 40px 10px;
   margin: 50px auto;
   width: 40vw;
-  font-size: 1.2vw;
+  font-size: 1vw;
   text-align: center;
+  background-color: #60c5ba;
 }
 
-button{
-  background-color: grey;
-  padding: 10px;
+.movie-list{
+  text-align: left;
+  padding-left: 80px;
+  padding-top: 30px;
+}
+
+
+
+
+
+
+
+h1{
+  font-size: 1.75vw;
+  padding: 0;
+  padding-bottom: 15px;
+  margin:0;
+  border:0;
+}
+
+.movie-title {
+  color: #534847;
+  font-size: 1.5vw;
+}
+
+.movie {
+  padding-top: 5px;
+  padding-bottom: 10px;
+
+}
+
+input {
+  background-color: #ef5285;
+  height: 40px;
   width: 150px;
-  border: 2px solid black;
-  border-radius: 2px;
-  font-size: 20px;
+  border: 0;
+  margin-top: 20px;
+  border-radius: 12px;
+
 }
 
-button:hover{
-  background-color: lightblue;
+input:hover{
+  background-color: #a7395d;
+  color: white;
 }
-
 

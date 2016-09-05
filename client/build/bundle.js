@@ -19774,13 +19774,18 @@
 	      React.createElement(
 	        'h1',
 	        null,
-	        'Films out at the cinema this week'
+	        'Films out at the'
+	      ),
+	      React.createElement(
+	        'h1',
+	        null,
+	        'cinema this week'
 	      ),
 	      React.createElement(MovieList, { data: this.state.data }),
 	      React.createElement(
 	        'form',
 	        { action: 'http://www.imdb.com/showtimes/' },
-	        React.createElement('input', { type: 'submit', value: 'Get Showtimes' })
+	        React.createElement('input', { type: 'submit', value: 'Get Showtimes', 'class': 'movie-button' })
 	      )
 	    );
 	  }
